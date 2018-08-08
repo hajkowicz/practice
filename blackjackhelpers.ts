@@ -1,8 +1,9 @@
 
 
+
 type Card = {suit: string, name: string, value: number};
 
-var shuffle = function(a: Array<Card>): Array<Card>{
+export var shuffle = function(a: Array<Card>): Array<Card>{
     var j, x, i;
     for (i = a.length - 1; i > 0; i--) {
         j = Math.floor(Math.random() * (i + 1));
@@ -33,7 +34,7 @@ var getSuit = function(num: number): string{
 	return suitDescriptor[num]
 }
 
-var getDeck = function(): Array<Card>{
+export var getDeck = function(): Array<Card>{
 	
 	var deck = [];
 
@@ -48,12 +49,13 @@ var getDeck = function(): Array<Card>{
 	return deck
 }
 
-var drawCard = function(currentDeck: Array<Card>): Card{
+export var drawCard = function(currentDeck: Array<Card>): Card{
 	var currentCard = currentDeck.pop()
 	if (currentCard === undefined){
 		throw new Error("Deck is Empty.")
 	} 
 	return currentCard;
+
 
 }
 
@@ -64,21 +66,15 @@ var getRandomInt = function(min: number, max: number): number{
 }
 
 
-var getSum = function(cards: Array<Card>): number{
+
+export var getSum = function(cards: Array<Card>): number{
+
 
 	var sum = 0
 
 	for (var i = 0; i < cards.length; i++){
 		sum = sum + cards[i].value
 	}
-	
-
-	return sum 
+	return sum
 }
-
-
-module.exports.drawCard = drawCard;
-module.exports.getSum = getSum;
-module.exports.getDeck = getDeck;
-module.exports.shuffle = shuffle;
 

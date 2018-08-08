@@ -2,7 +2,7 @@ var readline_sync = require("readline-sync");
 //var userName = readline_sync.question("What is your REAL name? ");
 //console.log("Hello " + userName + "!");
 
-var deck = require("./blackjackhelpers.js");
+import deck = require("./blackjackhelpers");
 
 var game = function(): void{
 	
@@ -11,12 +11,19 @@ var game = function(): void{
 
 
 
+
+
+
 	//Create & Shuffle Deck 
 	var currentDeck = deck.shuffle(deck.getDeck());
 
 
 
+
+
+
 	// 1. Show them their 2 cards and dealer 1 card
+
 
 	var playerCards = [deck.drawCard(currentDeck), deck.drawCard(currentDeck)] 
 	var dealerCards = [deck.drawCard(currentDeck), deck.drawCard(currentDeck)] 
@@ -50,6 +57,8 @@ var game = function(): void{
 
 
 
+
+
 	//Dealer's Turn 
 
 
@@ -57,6 +66,7 @@ var game = function(): void{
 	var playerSum = deck.getSum(playerCards)
 
 	console.log("The Dealer flipped over a " + dealerCards[1] + ".")
+
 
 
 	while (deck.getSum(dealerCards) < 17 && playerSum < 21){
@@ -95,6 +105,7 @@ var game = function(): void{
 		//max 4 unique numbers 
 		//deal with Aces 
 }
+
 	
 
 
@@ -102,3 +113,6 @@ game();
 
 //console.log(deck.getDeck()); 
 
+
+	//max 4 unique numbers
+	//deal with Aces
