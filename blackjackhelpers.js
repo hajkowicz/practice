@@ -1,6 +1,52 @@
 "use strict";
-var getCard = function () {
-    return getRandomInt(1, 12);
+var shuffle = function (a) {
+    var j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+    }
+    return a;
+};
+var getNameFromValue = function (num) {
+    //input 1 , output "Ace" , input 2, output "two", etc ...
+    if (num >= 2 && num <= 10) {
+        return String(num);
+    }
+    else if (num === 1) {
+        return "Ace";
+    }
+    else if (num === 11) {
+        return "Jack";
+    }
+    else if (num === 12) {
+        return "Queen";
+    }
+    else {
+        return "King";
+    }
+};
+var getSuit = function (num) {
+    var suitDescriptor = ["spades", "clubs", "hearts", "diamonds"];
+    return suitDescriptor[num];
+};
+var getDeck = function () {
+    var deck = [];
+    for (var y = 0; y < 4; y++) {
+        for (var x = 0; x < 13; x++) {
+            var cardOfSpades = { suit: getSuit(y), name: getNameFromValue(x + 1), value: x + 1 };
+            deck.push(cardOfSpades);
+        }
+    }
+    return deck;
+};
+var drawCard = function (currentDeck) {
+    var currentCard = currentDeck.pop();
+    if (currentCard === undefined) {
+        throw new Error("Deck is Empty.");
+    }
+    return currentCard;
 };
 var getRandomInt = function (min, max) {
     min = Math.ceil(min);
@@ -10,9 +56,11 @@ var getRandomInt = function (min, max) {
 var getSum = function (cards) {
     var sum = 0;
     for (var i = 0; i < cards.length; i++) {
-        sum = sum + cards[i];
+        sum = sum + cards[i].value;
     }
     return sum;
 };
-module.exports.getCard = getCard;
+module.exports.drawCard = drawCard;
 module.exports.getSum = getSum;
+module.exports.getDeck = getDeck;
+module.exports.shuffle = shuffle;
