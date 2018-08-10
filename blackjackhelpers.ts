@@ -55,12 +55,6 @@ export var drawCard = function(currentDeck: Array<Card>): Card {
   return currentCard;
 };
 
-var getRandomInt = function(min: number, max: number): number {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
-};
-
 export var getSum = function(cards: Array<Card>): number {
   var sum = 0;
 

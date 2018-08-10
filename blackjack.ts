@@ -94,8 +94,9 @@ var game = function(): void {
   // 4f. Check if player sum > dealer sum
   // 5. Print win/lose
 
-  //max 4 unique numbers
+
   //deal with Aces
+  //fix face card values
 };
 
 game();
