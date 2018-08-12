@@ -59,6 +59,13 @@ export var getSum = function(cards: Array<Card>): number {
   var sum = 0;
 
   for (var i = 0; i < cards.length; i++) {
+    if (cards[i].name === "Jack" || cards[i].name === "Queen" || cards[i].name === "King"){
+      cards[i].value = 10;
+    } else if (cards[i].name === "Ace" && sum < 11){
+      cards[i].value = 11;
+    } else if (cards[i].name === "Ace"){
+      cards[i].value = 1;
+    }
     sum = sum + cards[i].value;
   }
   return sum;

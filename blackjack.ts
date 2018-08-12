@@ -27,11 +27,25 @@ var game = function(): void {
       deck.getSum(playerCards) +
       "."
   );
-  console.log("Dealer shows " + dealerCards[0]);
+  console.log("Dealer shows a " + dealerCards[0].name + " of " + dealerCards[0].suit + ".");
 
-  // 2. Ask if they want to hit / stay
+  // 2. Ask if they want to hit / stay OR SPLIT
 
   while (deck.getSum(playerCards) < 21) {
+    if (playerCards[0].name === playerCards[1].name) {
+      var splitQuestion = readline_sync.question(
+        "Would you like to split?"
+      );
+      if (splitQuestion === "yes") {
+          console.log("Too Damn Bad. This Program does not have that capability.")
+      } else if (splitQuestion === "no"){
+        console.log("Good, I was not going to let you anyways.")
+      } else {
+        console.log("YOU ARE A FUCKING MORON.");
+      }
+    }
+
+
     var introQuestion = readline_sync.question(
       "Would you like to stay or hit?"
     );
@@ -44,7 +58,7 @@ var game = function(): void {
       var playerSum = deck.getSum(playerCards);
       console.log(
         "You drew a " +
-          playerCards[playerCards.length - 1] +
+          playerCards[playerCards.length - 1].name + " of " + playerCards[playerCards.length - 1].suit +
           ". Your total is " +
           playerSum +
           "."
@@ -61,12 +75,12 @@ var game = function(): void {
   var dealerSum = deck.getSum(dealerCards);
   var playerSum = deck.getSum(playerCards);
 
-  console.log("The Dealer flipped over a " + dealerCards[1] + ".");
+  console.log("The Dealer flipped over a " + dealerCards[1].name + " of " + dealerCards[1].suit + ".");
 
   while (deck.getSum(dealerCards) < 17 && playerSum < 21) {
     var currentCard = deck.drawCard(currentDeck);
     dealerCards.push(currentCard);
-    console.log("The Dealer drew a " + currentCard + ".");
+    console.log("The Dealer drew a " + currentCard.name + " of " + currentCard.suit + ".");
     dealerSum = deck.getSum(dealerCards);
   }
 
@@ -79,9 +93,9 @@ var game = function(): void {
   } else if (playerSum === dealerSum) {
     console.log("The dealer's total is " + dealerSum + ". PUSH");
   } else if (dealerSum > playerSum && dealerSum <= 21) {
-    console.log(". The dealer's total is " + dealerSum + ". You Lose Bitch.");
+    console.log("The dealer's total is " + dealerSum + ". You Lose Bitch.");
   } else if (dealerSum > playerSum && dealerSum > 21) {
-    console.log(". The dealer's total is " + dealerSum + ". You win.");
+    console.log("The dealer's total is " + dealerSum + ". You win.");
   } else {
     console.log("The dealer's total is " + dealerSum + ". YOU WIN!");
   }
@@ -94,6 +108,8 @@ var game = function(): void {
   // 4f. Check if player sum > dealer sum
   // 5. Print win/lose
 
+console.log(playerSum);
+console.log(dealerSum);
 
   //deal with Aces
   //fix face card values
@@ -102,6 +118,3 @@ var game = function(): void {
 game();
 
 //console.log(deck.getDeck());
-
-//max 4 unique numbers
-//deal with Aces
