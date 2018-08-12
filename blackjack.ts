@@ -39,7 +39,7 @@ var game = function(): void {
       if (splitQuestion === "yes") {
           console.log("Too Damn Bad. This Program does not have that capability.")
       } else if (splitQuestion === "no"){
-        console.log("Good, I was not going to let you anyways.")
+        console.log("Good, I was not going to let you anyways.");
       } else {
         console.log("YOU ARE A FUCKING MORON.");
       }
@@ -108,8 +108,8 @@ var game = function(): void {
   // 4f. Check if player sum > dealer sum
   // 5. Print win/lose
 
-console.log(playerSum);
-console.log(dealerSum);
+//console.log(playerSum);
+//console.log(dealerSum);
 
   //deal with Aces
   //fix face card values
