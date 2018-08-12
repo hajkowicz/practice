@@ -57,16 +57,28 @@ export var drawCard = function(currentDeck: Array<Card>): Card {
 
 export var getSum = function(cards: Array<Card>): number {
   var sum = 0;
+  var numAcesSeen = 0;
 
-  for (var i = 0; i < cards.length; i++) {
-    if (cards[i].name === "Jack" || cards[i].name === "Queen" || cards[i].name === "King"){
-      cards[i].value = 10;
-    } else if (cards[i].name === "Ace" && sum < 11){
-      cards[i].value = 11;
-    } else if (cards[i].name === "Ace"){
-      cards[i].value = 1;
+
+    for (var i = 0; i < cards.length; i++) {
+      if (cards[i].name === "Jack" || cards[i].name === "Queen" || cards[i].name === "King"){
+        cards[i].value = 10;
+      } else if (cards[i].name === "Ace"){
+        numAcesSeen += 1;
+        continue;
+      }
+      sum += cards[i].value;
     }
-    sum = sum + cards[i].value;
-  }
+
+    for (var i = 0; i < cards.length; i++) {
+      if (cards[i].name === "Ace" && sum + (numAcesSeen - 1) < 11){
+        cards[i].value = 11;
+        sum += cards[i].value;
+      } else if (cards[i].name === "Ace"){
+        cards[i].value = 1;
+        sum += cards[i].value;
+      }
+    }
+
   return sum;
 };

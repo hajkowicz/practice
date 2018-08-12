@@ -33,19 +33,20 @@ var game = function(): void {
 
   // 2. Ask if they want to hit / stay OR SPLIT
 
-  while (deck.getSum(playerCards) < 21) {
-    if (playerCards[0].name === playerCards[1].name) {
-      var splitQuestion = readline_sync.question("Would you like to split?");
-      if (splitQuestion === "yes") {
-        console.log(
-          "Too Damn Bad. This Program does not have that capability."
-        );
-      } else if (splitQuestion === "no") {
-        console.log("Good, I was not going to let you anyways.");
-      } else {
-        console.log("YOU ARE A FUCKING MORON.");
-      }
+  if (playerCards[0].name === playerCards[1].name) {
+    var splitQuestion = readline_sync.question("Would you like to split?");
+    if (splitQuestion === "yes") {
+      console.log(
+        "Too Damn Bad. This Program does not have that capability."
+      );
+    } else if (splitQuestion === "no") {
+      console.log("Good, I was not going to let you anyways.");
+    } else {
+      console.log("YOU ARE A FUCKING MORON.");
     }
+  }
+
+  while (deck.getSum(playerCards) < 21) {
 
     var introQuestion = readline_sync.question(
       "Would you like to stay or hit?"
