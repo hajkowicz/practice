@@ -1,0 +1,109 @@
+* {
+  box-sizing:border-box;
+}
+
+html {
+  width: 100%;
+  position:relative;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  background-color: #823329;
+  position:relative;
+  min-height: 100%;
+}
+
+#banner {
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+    padding: 300px;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+
+#content {
+}
+
+#content img {
+  position:absolute;
+  top: 0px;
+  right: 0px;
+  padding: 10px;
+}
+
+.writing {
+  background-color: #ffdd00;
+  border: 10px solid #f1c40f;
+}
+.writing:hover {
+  border: 20px solid #f1c40f;
+}
+
+.centered {
+  width: 90%;
+  position: relative;
+  padding-top: 200px;
+  text-align: center;
+  margin: auto;
+  padding-bottom: 200px;
+}
+
+#title {
+  font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  color: #EADEDA;
+  margin: auto;
+  border: 20px solid #998888;
+}
+
+#datetime {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #EADEDA
+}
+
+#labresults {
+  color: white;
+}
+
+.text {
+margin: auto;
+}
+
+#instrument {
+  padding-right: 10px;
+  padding-top: 50px;
+  margin: auto;
+  position:relative;
+  margin-top: 100px;
+  text-align: center;
+}
+
+
+.box {
+  width: 100px;
+  height: 100px;
+  margin-left: 10px;
+  margin-top: 10px;
+  position:relative;
+  text-align: center;
+  border-radius: 100%;
+  display: inline-block;
+}
+
+#c {
+  border-color: #998888;
+}
+
+
+#signature {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+}

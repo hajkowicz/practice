@@ -1,0 +1,28 @@
+
+
+*/
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+
+  <h1 id="title">Here we Go.</h1>
+  <button id = "fetchData">Fetch Data</button>
+  <p id="data"></p>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <script
+  src="./script.js"></script>
+</body>
+</html>
+/*
+
+/*
+IP: ADDRESS: 192.169.0.5
+TCP: PORT NUMBER: 80, MSG: 1/5
+HTTP: URL, METHOD: GET, HEADERS: - Content-Type: application/csv, application/json, text/html, -Accept: text/html, DATA: 'string'
+
+
+*/
