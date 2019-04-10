@@ -1,0 +1,211 @@
+* {
+  box-sizing:border-box;
+}
+
+html {
+  width: 100%;
+  position:relative;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  background-color: #050609;
+  position:relative;
+  min-height: 100%;
+}
+
+#banner {
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+    padding: 300px;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.writing {
+  background-color: #ffdd00;
+  border: 10px solid #f1c40f;
+}
+.writing:hover {
+  border: 20px solid #f1c40f;
+}
+
+.centered {
+  width: 100%;
+  position: relative;
+  padding-top: 200px;
+  text-align: center;
+  margin: auto;
+  padding-bottom: 200px;
+}
+
+#title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  color: white;
+  margin: auto;
+}
+
+.text {
+margin: auto;
+}
+
+#instrument {
+  padding-right: 10px;
+  padding-top: 50px;
+  margin: auto;
+  position:relative;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  margin-left: 10px;
+  margin-top: 10px;
+  position:relative;
+  text-align: center;
+  border-radius: 100%;
+  display: inline-block;
+}
+
+#c {
+  background-color: #3e181b;
+  border: 3px solid #db1d2d;
+}
+
+#c:hover {
+  background-color: #661920;
+  cursor: pointer;
+}
+
+#c:active {
+  background-color: #db1d2d;
+}
+
+#c2 {
+  left: 45px;
+}
+
+.letter {
+  color: white;
+  text-align: center;
+  margin-top: 5px;
+  font-size: 60px;
+  font-family: comic sans ms;
+}
+
+#d {
+  background-color: #422018;
+  border: 3px solid #f0421c;
+}
+#d:hover {
+  background-color: #6e2819;
+  cursor: pointer;
+}
+
+#d:active {
+  background-color: #f0421c;
+}
+
+#d2 {
+  left: 159px;
+}
+
+#e {
+  background-color: #45391b;
+  border: 3px solid #fec02d;
+}
+#e:hover {
+  background-color: #735b20;
+  cursor: pointer;
+}
+
+#e:active {
+  background-color: #fec02d;
+}
+
+#e2 {
+  left: 277px;
+}
+
+#f {
+  background-color: #193c29;
+  border: 3px solid #20d071;
+}
+#f:hover {
+  background-color: #1b613b;
+  cursor: pointer;
+}
+
+#f:active {
+  background-color: #20d071;
+}
+
+#f2 {
+  left: 394px;
+}
+
+#g {
+  background-color: #18323e;
+  border: 3px solid #1a9ddb;
+}
+#g:hover {
+  background-color: #184d65;
+  cursor: pointer;
+}
+
+#g:active {
+  background-color: #1a9ddb;
+}
+
+#g2 {
+  left: 508px;
+}
+
+#a {
+  background-color: #331f35;
+  border: 3px solid #a13fad;
+}
+#a:hover {
+  background-color: #4e2753;
+  cursor: pointer;
+}
+
+#a:active {
+  background-color: #a13fad;
+}
+
+#a2 {
+  left: 622px;
+}
+
+#b {
+  background-color: #43293d;
+  border: 3px solid #f26fd4;
+}
+#b:hover {
+  background-color: #6f3a62;
+  cursor: pointer;
+}
+
+#b:active {
+  background-color: #f26fd4;
+}
+
+#b2 {
+  left: 742px;
+}
+
+#signature {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+}

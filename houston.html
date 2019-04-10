@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lab Status</title>
+  <link href="houston.css" rel="stylesheet" type="text/css"></link>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="refresh" content="30">
+</head>
+<body>
+
+  <div style="font-family: Arial, Helvetica, sans-serif;
+  color: #EADEDA; padding:10px; margin-right: 150px;">Current Date/Time: <span id="datetime"></span>
+    <div id="content">
+      <img src ="image001.png" class="ribbon"></img>
+    </div>
+  </div>
+
+
+
+<div class="centered">
+      <div id="title" class="text">Lab Results in <i>REAL</i> Time.
+      </div>
+
+      <table id="labresults" style="width:100%" border="1">
+  <!--<tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr> -->
+</table>
+
+
+
+    </div>
+
+
+
+  <div id="signature">Powered by BackHack</div>
+
+
+
+
+
+
+
+
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <script
+  src="./houston.js"></script>
+  <script>var dt = new Date();
+  document.getElementById("datetime").innerHTML = dt.toLocaleString();
+  </script>
+  <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+
+</body>
+</html>
